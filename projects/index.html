@@ -49,33 +49,41 @@ body {
         .button img { max-width: 50px; margin-bottom: 10px; }
         .button:hover, .find-your a:hover { background: #000; transform: scale(1.05); }
 
-        .header-container { display: flex; justify-content: space-around; margin-bottom: 20px; }
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        /* Flexbox for top 5 buttons */
+        .header-container { display: flex; justify-content: space-evenly; margin-bottom: 20px; }
+
+        /* Grid for 5 buttons per row */
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr); /* Always 5 buttons per row */
+            gap: 20px; 
+            margin-top: 20px;
+        }
 
     </style>
 </head>
 <body>
-    <!-- Flexbox Header Buttons -->
+    <!-- Flexbox for 5 buttons at the top -->
     <div class="header-container">
         <a href="https://www.example1.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 1"> Button 1</a>
         <a href="https://www.example2.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 2"> Button 2</a>
         <a href="https://www.example3.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 3"> Button 3</a>
-    </div>
-
-    <!-- Grid Layout for More Buttons -->
-    <div class="grid-container">
         <a href="https://www.example4.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 4"> Button 4</a>
         <a href="https://www.example5.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 5"> Button 5</a>
+    </div>
+
+    <!-- Grid Layout for 5 buttons per row (below the top) -->
+    <div class="grid-container">
         <a href="https://www.example6.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 6"> Button 6</a>
         <a href="https://www.example7.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 7"> Button 7</a>
         <a href="https://www.example8.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 8"> Button 8</a>
-    </div>
-
-    <!-- Find Your Funnel Button -->
-    <div class="find-your">
-        <a href="URL_BRUH">‎‎‎TEXT</a>
+        <a href="https://www.example9.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 9"> Button 9</a>
+        <a href="https://www.example10.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 10"> Button 10</a>
+        <a href="https://www.example11.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 11"> Button 11</a>
+        <a href="https://www.example12.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 12"> Button 12</a>
+        <a href="https://www.example13.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 13"> Button 13</a>
+        <a href="https://www.example14.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 14"> Button 14</a>
+        <a href="https://www.example15.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 15"> Button 15</a>
     </div>
 </body>
 </html>
-
-
