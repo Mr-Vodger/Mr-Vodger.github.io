@@ -29,33 +29,53 @@ body {
 </style>
 </head>
 <body>
-.header-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Layouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: #000; padding: 20px; }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
+        .button, .find-your a {
+            background: #28282B; color: white; padding: 15px 30px; font-size: 18px; font-weight: bold;
+            text-align: center; border-radius: 12px; text-decoration: none; transition: 0.3s;
+            display: inline-block; margin: 10px; cursor: pointer;
+        }
 
-.button {
-    background-color: #28282B;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-}
+        .button img { max-width: 50px; margin-bottom: 10px; }
+        .button:hover, .find-your a:hover { background: #000; transform: scale(1.05); }
 
-.button:hover {
-    background-color: #000;
-    transform: scale(1.05);
-}
+        .header-container { display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+
+    </style>
+</head>
+<body>
+    <!-- Flexbox Header Buttons -->
+    <div class="header-container">
+        <a href="https://www.example1.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 1"> Button 1</a>
+        <a href="https://www.example2.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 2"> Button 2</a>
+        <a href="https://www.example3.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 3"> Button 3</a>
+    </div>
+
+    <!-- Grid Layout for More Buttons -->
+    <div class="grid-container">
+        <a href="https://www.example4.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 4"> Button 4</a>
+        <a href="https://www.example5.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 5"> Button 5</a>
+        <a href="https://www.example6.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 6"> Button 6</a>
+        <a href="https://www.example7.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 7"> Button 7</a>
+        <a href="https://www.example8.com" class="button"><img src="https://via.placeholder.com/50" alt="Icon 8"> Button 8</a>
+    </div>
+
+    <!-- Find Your Funnel Button -->
+    <div class="find-your">
+        <a href="URL_BRUH">‎‎‎TEXT</a>
+    </div>
+</body>
+</html>
 
 
