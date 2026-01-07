@@ -37,129 +37,31 @@ body {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Grid with Images and Links</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #f4f4f4;
-        }
-
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        .button-row {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .button {
-            display: block;
-            text-align: center;
-            background-color: #007bff;
-            color: white;
-            font-size: 14px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            width: 22%; /* 4 buttons per row */
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .button img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-
-        /* Prevent the link from underlining */
-        .button a {
-            text-decoration: none;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <title>Unblocked Games</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="button-container">
-    <div class="button-row">
-        <button class="button">
-            <a href="https://example.com/page1">
-                <img src="https://via.placeholder.com/20" alt="Icon 1">
-                <span>Button 1</span>
+    <!-- Unblocked Games Grid -->
+    <div class="game-grid">
+        <!-- Example Game Button -->
+        <div class="game-button">
+            <a href="https://example.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Game 1">
+                <p>Game 1</p>
             </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page2">
-                <img src="https://via.placeholder.com/20" alt="Icon 2">
-                <span>Button 2</span>
+        </div>
+
+        <!-- Repeat the above structure for all 85 buttons (17 rows × 5 buttons per row) -->
+        <!-- For example: -->
+        <div class="game-button">
+            <a href="https://example2.com" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Game 2">
+                <p>Game 2</p>
             </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page3">
-                <img src="https://via.placeholder.com/20" alt="Icon 3">
-                <span>Button 3</span>
-            </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page4">
-                <img src="https://via.placeholder.com/20" alt="Icon 4">
-                <span>Button 4</span>
-            </a>
-        </button>
+        </div>
+        <!-- Add more game buttons as needed -->
     </div>
-    <div class="button-row">
-        <button class="button">
-            <a href="https://example.com/page5">
-                <img src="https://via.placeholder.com/20" alt="Icon 5">
-                <span>Button 5</span>
-            </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page6">
-                <img src="https://via.placeholder.com/20" alt="Icon 6">
-                <span>Button 6</span>
-            </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page7">
-                <img src="https://via.placeholder.com/20" alt="Icon 7">
-                <span>Button 7</span>
-            </a>
-        </button>
-        <button class="button">
-            <a href="https://example.com/page8">
-                <img src="https://via.placeholder.com/20" alt="Icon 8">
-                <span>Button 8</span>
-            </a>
-        </button>
-    </div>
-    <!-- You can continue adding more rows following the same structure -->
-</div>
 
 </body>
 </html>
