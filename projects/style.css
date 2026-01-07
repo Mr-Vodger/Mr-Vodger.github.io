@@ -1,5 +1,3 @@
-/* Resetting margins and padding */
-/* Resetting margins and padding */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -10,9 +8,9 @@ body {
 /* GRID */
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Five columns for the grid */
-  gap: 32px; /* Space between cubes */
-  padding-top: 120px; /* Space from the top */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  padding: 120px 40px;
   max-width: 1300px;
   margin: auto;
 }
@@ -23,46 +21,43 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
   background: #1e1e1e;
   border-radius: 18px;
   text-decoration: none;
   color: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden; /* Hide overflowed content */
+  padding: 20px;
 }
 
 .game-cube:hover {
-  transform: scale(1.05) translateY(-6px); /* Slight scale and move effect */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* IMAGE */
 .game-cube img {
-  width: 80%;
-  height: auto;
-  object-fit: cover; /* Ensures image covers the area without distortion */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 /* TEXT */
 .game-cube span {
   margin-top: 10px;
   font-size: 14px;
-  text-align: center;
   font-weight: bold;
-  color: #fff; /* White text color */
+  text-align: center;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .game-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 500px) {
   .game-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on extra small screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
