@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  padding-top: 120px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.game-cube {
+  aspect-ratio: 1 / 1;
+  background: #1e1e1e;
+  border-radius: 18px;
+  text-decoration: none;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-cube img {
+  width: 65%;
+}
+
+.game-cube span {
+  margin-top: 10px;
+  font-size: 14px;
+}
