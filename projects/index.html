@@ -29,39 +29,65 @@ body {
 </style>
 </head>
 <body>
+/* GAME GRID */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px; /* MORE SPACE BETWEEN CUBES */
+  padding-top: 120px; /* PUSHES CUBES DOWN */
+  max-width: 1300px;
+  margin: 0 auto;
+}
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unblocked Games</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* CUBE BUTTON */
+.game-cube {
+  aspect-ratio: 1 / 1; /* PERFECT CUBE */
+  background: #1e1e1e; /* DARK (NOT BLUE) */
+  border-radius: 18px;
+  text-decoration: none;
+  color: white;
 
-    <!-- Unblocked Games Grid -->
-    <div class="game-grid">
-        <!-- Example Game Button -->
-        <div class="game-button">
-            <a href="https://example.com" target="_blank">
-                <img src="https://via.placeholder.com/100" alt="Game 1">
-                <p>Game 1</p>
-            </a>
-        </div>
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-        <!-- Repeat the above structure for all 85 buttons (17 rows × 5 buttons per row) -->
-        <!-- For example: -->
-        <div class="game-button">
-            <a href="https://example2.com" target="_blank">
-                <img src="https://via.placeholder.com/100" alt="Game 2">
-                <p>Game 2</p>
-            </a>
-        </div>
-        <!-- Add more game buttons as needed -->
-    </div>
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* IMAGE INSIDE CUBE */
+.game-cube img {
+  width: 65%;
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* GAME NAME */
+.game-cube span {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/* HOVER EFFECT */
+.game-cube:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 </body>
 </html>
