@@ -29,65 +29,36 @@ body {
 </style>
 </head>
 <body>
-/* GAME GRID */
-.game-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px; /* MORE SPACE BETWEEN CUBES */
-  padding-top: 120px; /* PUSHES CUBES DOWN */
-  max-width: 1300px;
-  margin: 0 auto;
-}
 
-/* CUBE BUTTON */
-.game-cube {
-  aspect-ratio: 1 / 1; /* PERFECT CUBE */
-  background: #1e1e1e; /* DARK (NOT BLUE) */
-  border-radius: 18px;
-  text-decoration: none;
-  color: white;
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unblocked Games</title>
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  <!-- LINK TO CSS FILE -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  <!-- GAME CUBES START -->
+  <div class="game-grid">
 
-/* IMAGE INSIDE CUBE */
-.game-cube img {
-  width: 65%;
-  height: auto;
-  margin-bottom: 10px;
-  object-fit: contain;
-}
+    <a class="game-cube" href="https://example.com">
+      <img src="https://via.placeholder.com/150" alt="Game">
+      <span>Game Name</span>
+    </a>
 
-/* GAME NAME */
-.game-cube span {
-  font-size: 14px;
-  text-align: center;
-  padding: 0 5px;
-}
+    <!-- COPY THIS BLOCK FOR MORE GAMES -->
+    <a class="game-cube" href="https://example2.com">
+      <img src="https://via.placeholder.com/150" alt="Game">
+      <span>Game 2</span>
+    </a>
 
-/* HOVER EFFECT */
-.game-cube:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .game-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .game-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+  </div>
+  <!-- GAME CUBES END -->
 
 </body>
 </html>
