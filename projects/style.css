@@ -1,44 +1,48 @@
 /* Resetting margins and padding */
+/* Resetting margins and padding */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #0f0f0f;
+  color: white;
 }
 
 /* GRID */
 .game-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* Five columns for the grid */
-  gap: 32px; /* MORE SPACE BETWEEN CUBES */
-  padding-top: 120px; /* Space at the top */
+  gap: 32px; /* Space between cubes */
+  padding-top: 120px; /* Space from the top */
   max-width: 1300px;
   margin: auto;
 }
 
 /* CUBE */
 .game-cube {
-  aspect-ratio: 1 / 1; /* PERFECT CUBE */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
   background: #1e1e1e;
   border-radius: 18px;
   text-decoration: none;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Hide overflowed content */
 }
 
 .game-cube:hover {
-  transform: translateY(-6px); /* Slight lift effect */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Shadow on hover */
+  transform: scale(1.05) translateY(-6px); /* Slight scale and move effect */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow on hover */
 }
 
 /* IMAGE */
 .game-cube img {
-  width: 65%;
+  width: 80%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover; /* Ensures image covers the area without distortion */
 }
 
 /* TEXT */
@@ -46,6 +50,8 @@ body {
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
+  font-weight: bold;
+  color: #fff; /* White text color */
 }
 
 /* RESPONSIVE */
