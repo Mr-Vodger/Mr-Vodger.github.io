@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f0f0f;
+  background: #001a66; /* BLUE BACKGROUND */
   color: white;
 }
 
@@ -10,7 +10,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 32px;
-  padding: 120px 40px;
+  padding: 100px 40px;
   max-width: 1300px;
   margin: auto;
 }
@@ -19,19 +19,19 @@ body {
 .game-cube {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: #1e1e1e;
+  justify-content: center;
+  background: #111;
   border-radius: 18px;
   text-decoration: none;
   color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-cube:hover {
-  transform: scale(1.05) translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 /* IMAGE */
