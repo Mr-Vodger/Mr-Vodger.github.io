@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #001a66;
+  background: #001a66; /* BLUE BACKGROUND */
   color: white;
 }
 
@@ -15,59 +15,44 @@ body {
   margin: auto;
 }
 
-/* TILE */
+/* CUBE */
 .game-cube {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* name at bottom */
+  width: 150px;
+  height: 150px;
   background: #111;
+  border-radius: 18px;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-cube:hover {
-  transform: translateY(-6px) scale(1.03);
+  transform: translateY(-6px) scale(1.05);
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* IMAGE — DEFINES HEIGHT */
+/* IMAGE */
 .game-cube img {
   width: 100%;
-  height: auto;          /* 👈 AUTO RESIZE */
-  display: block;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  object-fit: cover; /* fills box */
 }
 
-/* BLUR ON HOVER */
-.game-cube:hover img {
-  filter: blur(4px) brightness(0.85);
-  transform: scale(1.05);
-}
-
-/* OVERLAY */
-.game-cube::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* CENTERED TITLE */
+/* TEXT AT BOTTOM */
 .game-cube span {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  padding: 20px;
+  bottom: 10px;
+  width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
-  pointer-events: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  z-index: 2;
 }
 
 /* RESPONSIVE */
