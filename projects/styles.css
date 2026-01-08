@@ -15,14 +15,15 @@ body {
   margin: auto;
 }
 
-/* CUBE */
+/* BIG CUBE */
 .game-cube {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end; /* text at bottom */
   align-items: center;
-  justify-content: flex-end; /* name at bottom */
-  width: 150px;
-  height: 150px;
+  width: 200px;       /* BIG BOX WIDTH */
+  height: 200px;      /* BIG BOX HEIGHT */
   background: #111;
   border-radius: 18px;
   text-decoration: none;
@@ -36,20 +37,20 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* IMAGE */
+/* IMAGE FILLS BOX */
 .game-cube img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills box */
+  object-fit: cover;
 }
 
-/* TEXT AT BOTTOM */
+/* TEXT AT BOTTOM CENTER */
 .game-cube span {
   position: absolute;
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   text-shadow: 0 2px 6px rgba(0,0,0,0.8);
   z-index: 2;
