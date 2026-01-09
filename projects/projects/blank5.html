@@ -11,6 +11,7 @@
       width: 100%;
       background-color: #111;
       overflow: hidden;
+      cursor: pointer;
     }
 
     iframe {
@@ -18,11 +19,63 @@
       height: 100%;
       border: none;
     }
+
+    /* ESC message */
+    .esc-message {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .esc-message.show {
+      opacity: 1;
+    }
   </style>
 </head>
-<body>
+<body onclick="goFullscreen()">
 
-  <iframe src="https://elidianesampaiotrabuco.github.io/BaldisBasicsPlus/"></iframe>
+  <div id="escMessage" class="esc-message">
+    Press ESC to exit fullscreen
+  </div>
+
+  <iframe
+    id="gameFrame"
+    src="https://elidianesampaiotrabuco.github.io/BaldisBasicsPlus/">
+  </iframe>
+
+  <script>
+    function goFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().then(() => {
+          const msg = document.getElementById('escMessage');
+          msg.classList.add('show');
+
+          // Hide after 3 seconds
+          setTimeout(() => {
+            msg.classList.remove('show');
+          }, 3000);
+        });
+      }
+    }
+
+    // Hide message if user exits fullscreen
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        document.getElementById('escMessage').classList.remove('show');
+      }
+    });
+  </script>
 
 </body>
 </html>
