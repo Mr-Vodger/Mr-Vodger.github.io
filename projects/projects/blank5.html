@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Project Blank Page</title>
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
-      background-color: #111;
+      height: 100%;
+      background: #000;
       overflow: hidden;
     }
 
@@ -22,38 +23,11 @@
 </head>
 <body>
 
-<iframe srcdoc='
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <base href="https://cdn.jsdelivr.net/gh/genizy/web-port@main/bergentruck/">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BERGENTRUCK_201X</title>
-
-  <style>
-    html, body, #canvas {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: black;
-      color: white;
-      overflow: hidden;
-    }
-
-    #canvas {
-      display: block;
-    }
-  </style>
-
-  <link rel="icon" href="BERGENTRUCK_201X.icon.png">
-</head>
-<body>
-  <canvas id="canvas"></canvas>
-</body>
-</html>
-'></iframe>
+<iframe
+  src="https://cdn.jsdelivr.net/gh/genizy/web-port@main/bergentruck/BERGENTRUCK_201X.html"
+  allow="fullscreen; gamepad; autoplay"
+  allowfullscreen>
+</iframe>
 
 </body>
 </html>
-
