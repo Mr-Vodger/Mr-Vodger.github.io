@@ -120,9 +120,11 @@ html, body {
 <title>Clock Box</title>
 
 <style>
-body {
+html, body {
   margin: 0;
-  height: 200vh; /* just so you can scroll */
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Black time box */
@@ -132,11 +134,11 @@ body {
   left: 15px;
   background: black;
   color: white;
-  padding: 12px 18px;
+  padding: 12px 20px;
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  box-shadow: 0 0 12px rgba(0,0,0,0.7);
   z-index: 9999;
 }
 </style>
@@ -144,7 +146,7 @@ body {
 
 <body>
 
-<div id="timeBox">00:00:00</div>
+<div id="timeBox">12:00:00 AM</div>
 
 <script>
 function updateTime() {
@@ -152,14 +154,18 @@ function updateTime() {
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
+  let ampm = hours >= 12 ? "PM" : "AM";
+
+  // Convert to 12-hour format
+  hours = hours % 12;
+  hours = hours ? hours : 12; // 0 becomes 12
 
   // Add leading zeros
-  hours = String(hours).padStart(2, "0");
   minutes = String(minutes).padStart(2, "0");
   seconds = String(seconds).padStart(2, "0");
 
   document.getElementById("timeBox").textContent =
-    hours + ":" + minutes + ":" + seconds;
+    hours + ":" + minutes + ":" + seconds + " " + ampm;
 }
 
 // Update every second
@@ -169,4 +175,3 @@ updateTime();
 
 </body>
 </html>
-
