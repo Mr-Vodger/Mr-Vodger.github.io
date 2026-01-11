@@ -5,7 +5,7 @@ NOT FINISHED!!
 
 ## Features
 
-- Fullscreen Mode
+- Fullscreen Mode For SOME Projects
 - Never Bored I Guess
 
 
