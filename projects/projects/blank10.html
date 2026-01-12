@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blank10</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #000; /* black background for the game */
-      overflow: hidden;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Blank Page</title>
 </head>
 <body>
 
-<!-- This iframe loads your full game from the CDN -->
-<iframe
-  src="https://fnf.kdata1.com/2025/mistful-crimson-morning-reboot/1/"
-  allow="autoplay; gamepad"
-  allowfullscreen>
-</iframe>
+<button onclick="openBlankPage()">Open Blank Page with Content</button>
+
+<script>
+    function openBlankPage() {
+        // Open a new blank page
+        var newWindow = window.open('about:blank', '_blank');
+        
+        // Make sure the new window is fully loaded before modifying its content
+        newWindow.document.open();
+        newWindow.document.write('<html><head><title>New Blank Page</title></head><body>');
+        newWindow.document.write('<h1>Hello, this is content inside the blank page!</h1>');
+        newWindow.document.write('<p>More content can go here.</p>');
+        newWindow.document.write('</body></html>');
+        newWindow.document.close();
+    }
+</script>
 
 </body>
 </html>
+
