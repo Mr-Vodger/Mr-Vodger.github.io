@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Blank Page</title>
 </head>
 <body>
-
-<button onclick="openBlankPage()">Open Blank Page with Content</button>
-
+<button onclick="openGame()">Open Game</button>
 <script>
-    function openBlankPage() {
-        // Open a new blank page
-        var newWindow = window.open('about:blank', '_blank');
-        
-        // Make sure the new window is fully loaded before modifying its content
-        newWindow.document.open();
-        newWindow.document.write('<html><head><title>New Blank Page</title></head><body>');
-        newWindow.document.write('<h1>Hello, this is content inside the blank page!</h1>');
-        newWindow.document.write('<p>More content can go here.</p>');
-        newWindow.document.write('</body></html>');
-        newWindow.document.close();
-    }
+function openGame() {
+var win = window.open()
+var url = ""  //use your own link google  com and other sites like minecraft.net will not work.
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+}
 </script>
-
 </body>
 </html>
-
