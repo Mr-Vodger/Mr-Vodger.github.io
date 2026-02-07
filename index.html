@@ -107,22 +107,16 @@ updateTime();
 
 <style>
 body {
-  margin: 0;
-  background: #111;
+  margin: 0;   /* keep this */
 }
 
 /* Movable logo */
 #logo {
   position: absolute;
-
-  /* Center horizontally */
   left: 50%;
+  top: 25%;          /* middle but a little up */
   transform: translateX(-50%);
-
-  /* Middle but slightly up */
-  top: 25%;
-
-  width: 150px; /* CHANGE SIZE HERE */
+  width: 450px;      /* change size here if you want */
   cursor: grab;
 }
 </style>
@@ -142,20 +136,18 @@ logo.addEventListener("mousedown", (e) => {
   isDragging = true;
   offsetX = e.clientX - logo.offsetLeft;
   offsetY = e.clientY - logo.offsetTop;
-  logo.style.cursor = "grabbing";
 });
 
 document.addEventListener("mousemove", (e) => {
   if (isDragging) {
     logo.style.left = e.clientX - offsetX + "px";
     logo.style.top = e.clientY - offsetY + "px";
-    logo.style.transform = "none"; // keeps dragging smooth
+    logo.style.transform = "none";
   }
 });
 
 document.addEventListener("mouseup", () => {
   isDragging = false;
-  logo.style.cursor = "grab";
 });
 </script>
 
