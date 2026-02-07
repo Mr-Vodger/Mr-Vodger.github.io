@@ -98,3 +98,66 @@ updateTime();
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Movable Logo</title>
+
+<style>
+body {
+  margin: 0;
+  background: #111;
+}
+
+/* Movable logo */
+#logo {
+  position: absolute;
+
+  /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Middle but slightly up */
+  top: 25%;
+
+  width: 150px; /* CHANGE SIZE HERE */
+  cursor: grab;
+}
+</style>
+</head>
+
+<body>
+
+<img id="logo" src="https://github.com/user-attachments/assets/12a1c740-df1e-42fe-b0e4-4bcac9c9644f">
+
+<script>
+const logo = document.getElementById("logo");
+
+let isDragging = false;
+let offsetX, offsetY;
+
+logo.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - logo.offsetLeft;
+  offsetY = e.clientY - logo.offsetTop;
+  logo.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    logo.style.left = e.clientX - offsetX + "px";
+    logo.style.top = e.clientY - offsetY + "px";
+    logo.style.transform = "none"; // keeps dragging smooth
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  logo.style.cursor = "grab";
+});
+</script>
+
+</body>
+</html>
