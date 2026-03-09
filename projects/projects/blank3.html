@@ -5,28 +5,52 @@
 <title>Loading...</title>
 
 <style>
-body{
+html, body{
   margin:0;
+  height:100%;
+  overflow:hidden;
 }
+
 iframe{
-  width:100%;
+  width:100vw;
   height:100vh;
   border:none;
+}
+
+#loading{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:Arial, sans-serif;
+  font-size:30px;
 }
 </style>
 
 <script>
 window.onload = function () {
-  document.body.innerHTML = `
-  <iframe 
-    src="https://mods.vintagestory.at/list/mod"
-    allowfullscreen>
-  </iframe>
-  `;
+
+  // show loading for a short time
+  setTimeout(function(){
+
+    document.body.innerHTML = `
+    <iframe 
+      src="https://www.rocketgames.io/gameframe/super-smash-flash-2"
+      allowfullscreen>
+    </iframe>
+    `;
+
+  }, 1000); // 1 second loading screen
 };
 </script>
 
 </head>
+
 <body>
+
+<div id="loading">
+Loading...
+</div>
+
 </body>
 </html>
