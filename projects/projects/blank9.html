@@ -1,239 +1,40 @@
 <!DOCTYPE html>
-
-
-<!-- Ultimate Game Stash file--> 
-<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
-
-
 <html lang="en-us">
-<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/bfnsu/">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Baldi's Fun New School Plus</title>
-  <link rel="shortcut icon" href="TemplateData/favicon.ico">
-  <link rel="stylesheet" href="TemplateData/style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>BitLife - Life Simulator</title>
+    <style>
+		body{font-family:"Myriad Pro", Myriad ,"Helvetica Neue",Helvetica,Arial,sans-serif}body{margin:0;padding:0;position:absolute;height:100%;width:100%;background-size:cover;font-style:regular;font-family:"Myriad Pro", Myriad ,"Helvetica Neue",Helvetica,Arial,sans-serif}.webgl-content{background:#333}#errorBrowserBlock,#loadingBlock,.webgl-content{padding:0;position:absolute;height:100vh;width:100vw}canvas{position:absolute;height:100%;width:100%}#gameContainer{position:absolute;height:100%;width:100%}#fullScreenButton,#logoname{height:35px;width:35px;position:absolute;bottom:5px;right:5px;background-color:transparent;background-image:url(../img/fullScreen_on.png);background-size:35px 35px;border:none;cursor:pointer}#logoname{background-image:url(../img/logo-big.png);left:15px;bottom:11px;width:141px;height:20px;background-size:141px 20px}.subtitle{color:#fff;font-size:15px;padding-bottom:15px;padding-top:15px;display:block;margin:auto;text-align:center}.logo{display:block;margin:20px auto;width:265px;height:60px}.logo-game{height:150px;width:auto;display:block;margin:auto;margin-top:5px;border-radius:20px;box-shadow:0 20px 20px -10px rgba(0,0,0,.3)}#errorBrowserBlock,#loadingBlock{background:#333;background-size:cover;z-index:1}.cover{position:absolute;z-index:-1;top:0;right:0;bottom:0;left:0;-moz-background-size:cover;-webkit-background-size:cover;background-size:cover;opacity:.5;filter:blur(16px)}#errorContent,#progressBar,#warningBrowserBlock,#warningMobileBlock{height:25vh;width:40vw;margin:auto;text-align:center}#progressBar{height:8vh;color:#fff;font-size:4vh}#errorContent,#warningBrowserBlock,#warningMobileBlock{margin-top:15vh;color:#fff;font-size:2.3vh}.browserIcons{display:inline-flex;margin-top:2vh}.browserIcons a{width:150px}#errorContent{font-size:3vh;margin-top:5vh}.centered{height:100%;max-width:770px;margin-left:auto;margin-right:auto}.webgl-content *{border:0;margin:0;padding:0}.webgl-content{height:100%;width:100%}.progress,.webgl-content .logo{position:absolute;left:50%;top:45%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.webgl-content .logo{background:url(logo.png) no-repeat center/contain;width:130px;height:130px}.webgl-content .progress{height:18px;width:141px;margin-top:90px}.webgl-content .progress .empty{background:url(TemplateData/progressEmpty.Light.png) no-repeat right/cover;float:right;width:100%;height:100%;display:inline-block}.webgl-content .progress .full{background:url(TemplateData/progressFull.Light.png) no-repeat left/cover;float:left;width:0%;height:100%;display:inline-block}.webgl-content .logo.Dark{background-image:url(logo.png)}.webgl-content .progress.Dark .empty{background-image:url(TemplateData/progressEmpty.Dark.png)}.webgl-content .progress.Dark .full{background-image:url(TemplateData/progressFull.Dark.png)}.webgl-content .footer{margin-top:5px;height:38px;line-height:38px;font-family:Helvetica,Verdana,Arial,sans-serif;font-size:18px}.fullscreen,.title,.webgl-content .footer .webgl-logo{height:100%;display:inline-block;background:transparent center no-repeat}.webgl-content .footer .webgl-logo{background-image:url(TemplateData/webgl-logo.png);width:204px;float:left}.webgl-content .footer .title{margin-right:10px;float:right}.webgl-content .footer .fullscreen{background-image:url(TemplateData/fullscreen.png);width:38px;float:right}
+        body,html{margin:0 auto;padding:0 auto;width:62vh;height:100%;overflow:hidden}#links2{position:absolute;right:0;bottom:0;padding:8px;list-style:none;background-color:#fff;border-top-left-radius:5px}#links2 ul{list-style-type:none;margin:0;padding:0}#links2 ul li{display:inline}#links2 ul li a{color:#000;display:inline-block;margin-right:10px;text-decoration:none}#links2 ul li a.visited{color:#000}#links2 ul li a:hover{opacity:.85}
+	</style>
+	  <link rel="canonical" href="/">
+	<script src="https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/TemplateData/UnityProgress.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/a456pur/seraph@ae2fcc6d6a9cd051654fcc0519080db1f79cf2a7/games/bitlife/Build/BitLife.json", {onProgress: UnityProgress});
+    </script>
 
-<body>
-  <div id="unity-container" class="unity-desktop">
-    <canvas id="unity-canvas" width=960 height=600></canvas>
-    <div id="unity-loading-bar">
-      <div id="unity-logo"></div>
-      <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full"></div>
-      </div>
-    </div>
-    <div id="unity-warning"> </div>
-    <div id="unity-footer">
-      <div id="unity-webgl-logo"></div>
-      <div id="unity-fullscreen-button"></div>
-      <div id="unity-build-title">Baldi's Fun New School Plus Ultimate Edition</div>
-    </div>
+  </head>
+  <body>
+    <div id="listLink" style="width: 100%; text-align: center; position: absolute; top: 0px; z-index: 999; background: rgb(119, 119, 255); opacity: 0.8;">
+
+      <ul style="color: #ffffff; padding: 0px; margin: 0px; font-size: 20px;">
+          <li style="padding: 5px; display: inline-block; float: left;">
+          <a href="" style="color: #ffffff; text-decoration: none;">Bitlife</a>
+          </li>
+          <li style="padding: 5px; display: inline-block; float: right;">
+          <a onclick="return closeBacklinks();" style="color: #ffffff; text-decoration: none;">❌</a>
+          </li>
+      </ul>
   </div>
-  <script>
-    var container = document.querySelector("#unity-container");
-    var canvas = document.querySelector("#unity-canvas");
-    var loadingBar = document.querySelector("#unity-loading-bar");
-    var progressBarFull = document.querySelector("#unity-progress-bar-full");
-    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-    var warningBanner = document.querySelector("#unity-warning");
-
-    function unityShowBanner(msg, type) {
-      function updateBannerVisibility() {
-        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-      }
-      var div = document.createElement('div');
-      div.innerHTML = msg;
-      warningBanner.appendChild(div);
-      if (type == 'error') div.style = 'background: red; padding: 10px;';
-      else {
-        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-        setTimeout(function() {
-          warningBanner.removeChild(div);
-          updateBannerVisibility();
-        }, 5000);
-      }
-      updateBannerVisibility();
+  <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 100%;"></div>
+    </div>
+    <script>
+      function closeBacklinks(){
+        document.querySelector('#listLink').style.display = "none";
     }
-
-    window.mergedBlobUrls = {};
-    window.assetsReady = false;
-
-    async function mergeSplitFile(fileUrlBase, numParts) {
-      const partUrls = Array.from({ length: numParts }, (_, i) => 
-        `${fileUrlBase}.part${i + 1}`
-      );
-
-      try {
-        const responses = await Promise.all(
-          partUrls.map(url => fetch(url))
-        );
-
-        if (responses.some(r => !r.ok)) {
-          return null;
-        }
-
-        const parts = await Promise.all(
-          responses.map(r => r.arrayBuffer())
-        );
-
-        const combinedBlob = new Blob(parts, {
-          type: 'application/octet-stream'
-        });
-
-        return URL.createObjectURL(combinedBlob);
-      } catch (error) {
-        return null;
-      }
-    }
-
-    function setupXHRInterceptor() {
-      if (window.xhrInterceptorInstalled) {
-        return;
-      }
-      
-      const originalOpen = XMLHttpRequest.prototype.open;
-      const originalSend = XMLHttpRequest.prototype.send;
-
-      XMLHttpRequest.prototype.open = function(method, url, ...args) {
-        this._url = url;
-        this._method = method;
-        this._args = args;
-        
-        let finalUrl = url;
-        const decodedUrl = decodeURIComponent(url);
-        
-        for (const [filename, blobUrl] of Object.entries(window.mergedBlobUrls)) {
-          if (url.includes(encodeURIComponent(filename)) || 
-              decodedUrl.includes(filename) || 
-              url.includes(filename)) {
-            finalUrl = blobUrl;
-            break;
-          }
-        }
-        
-        return originalOpen.call(this, method, finalUrl, ...args);
-      };
-
-      XMLHttpRequest.prototype.send = function(...args) {
-        const xhr = this;
-        
-        if (!window.assetsReady) {
-          const checkReady = setInterval(() => {
-            if (window.assetsReady) {
-              clearInterval(checkReady);
-              originalSend.apply(xhr, args);
-            }
-          }, 50);
-          return;
-        }
-        
-        return originalSend.apply(this, args);
-      };
-      
-      window.xhrInterceptorInstalled = true;
-    }
-
-    function setupFetchInterceptor() {
-      if (window.fetchInterceptorInstalled) {
-        return;
-      }
-
-      const originalFetch = window.fetch;
-      window.fetch = function(url, ...args) {
-        let finalUrl = url;
-        const decodedUrl = typeof url === 'string' ? decodeURIComponent(url) : '';
-        
-        for (const [filename, blobUrl] of Object.entries(window.mergedBlobUrls)) {
-          if ((typeof url === 'string' && 
-              (url.includes(encodeURIComponent(filename)) || 
-               decodedUrl.includes(filename) || 
-               url.includes(filename)))) {
-            finalUrl = blobUrl;
-            break;
-          }
-        }
-        
-        return originalFetch.call(this, finalUrl, ...args);
-      };
-
-      window.fetchInterceptorInstalled = true;
-    }
-
-    async function prepareGameAssets() {
-      try {
-        window.assetsReady = false;
-        delete window.xhrInterceptorInstalled;
-        delete window.fetchInterceptorInstalled;
-        window.mergedBlobUrls = {};
-        
-        setupXHRInterceptor();
-        setupFetchInterceptor();
-        
-        const filesToMerge = [
-          { filename: 'Build/BFNSPUE Alpha 6 Part 2b WebGL.data', parts: 9 },
-          { filename: 'Build/BFNSPUE Alpha 6 Part 2b WebGL.wasm', parts: 2 }
-        ];
-        
-        for (const file of filesToMerge) {
-          const blobUrl = await mergeSplitFile(file.filename, file.parts);
-          if (blobUrl) {
-            window.mergedBlobUrls[file.filename] = blobUrl;
-          }
-        }
-        
-        window.assetsPrepared = true;
-        window.assetsReady = true;
-        
-      } catch (error) {
-        window.assetsPrepared = false;
-        window.assetsReady = true;
-      }
-    }
-
-    prepareGameAssets().then(() => {
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.data",
-        frameworkUrl: buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.framework.js",
-        codeUrl: buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "JohnsterSpaceGames",
-        productName: "Baldi's Fun New School Plus Ultimate Edition",
-        productVersion: "0.2.5b",
-        showBanner: unityShowBanner,
-      };
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
-      } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-      canvas.style.background = "url('" + buildUrl + "/BFNSPUE Alpha 6 Part 2b WebGL.jpg') center / cover";
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
