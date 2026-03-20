@@ -1,68 +1,11 @@
-<html lang="en"><head>
-	<base href="https://cdn.jsdelivr.net/gh/bubbls/fnf-mods@main/shucks-v2/">
-	<meta charset="utf-8">
-	
-	<title>Fnf Shucks V2</title>
-	
-	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	
-	<link rel="shortcut icon" type="image/png" href="./favicon.png">
-	
-	
-	<script type="text/javascript" src="./PsychEngine.js"></script>
-	
-	<script>
-		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
-		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
-			var meta = document.getElementById ("viewport");
-			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
-		}
-		window.addEventListener("keydown", function(e) {if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {e.preventDefault(); }}, false);
-	</script>
-	
-	<style>
-		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-		#openfl-content { background: #000000; width: 100%; height: 100%; }
-		@font-face {
-			font-family: 'Pixel Arial 11 Bold';
-			src: url('assets/fonts/pixel.eot?#iefix') format('embedded-opentype'),
-			url('assets/fonts/pixel.woff') format('woff'),
-			url('assets/fonts/pixel.otf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-		}
-		@font-face {
-			font-family: 'VCR OSD Mono';
-			src: url('assets/fonts/vcr.eot?#iefix') format('embedded-opentype'),
-			url('assets/fonts/vcr.woff') format('woff'),
-			url('assets/fonts/vcr.ttf') format('truetype'),
-			url('assets/fonts/vcr.svg#VCR%20OSD%20Mono') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-		@font-face {
-			font-family: 'Nokia Cellphone FC Small';
-			src: url('flixel/fonts/nokiafc22.eot?#iefix') format('embedded-opentype'),
-			url('flixel/fonts/nokiafc22.woff') format('woff'),
-			url('flixel/fonts/nokiafc22.ttf') format('truetype'),
-			url('flixel/fonts/nokiafc22.svg#Nokia%20Cellphone%20FC%20Small') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-		@font-face {
-			font-family: 'Monsterrat';
-			src: url('flixel/fonts/monsterrat.eot?#iefix') format('embedded-opentype'),
-			url('flixel/fonts/monsterrat.woff') format('woff'),
-			url('flixel/fonts/monsterrat.ttf') format('truetype'),
-			url('flixel/fonts/monsterrat.svg#Monsterrat') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-	</style>
-	
-<style>/*!
+<html lang="en-us"><head>
+      <base href="https://cdn.jsdelivr.net/gh/CoolDude2349/everything@main/funnybattle2/">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  <style>/*!
  * Toastify js 1.12.0
  * https://github.com/apvarun/toastify-js
  * @license MIT licensed
@@ -803,17 +746,87 @@
         background: #ffb;
     }
 </style><style>.immersive-reader-button{cursor:pointer;display:inline-block;padding:5px;} .immersive-reader-button:hover{background:rgba(0,0,0,.05);border-radius:2px</style></head>
-<body>
-	
-	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
-	
-	<div id="openfl-content" style="cursor: none;"><canvas width="1280" height="720" style="transform: translateZ(0px); width: 771px; height: 433px; margin-left: 0px; margin-top: 124px;"></canvas></div>
-	
-	<script type="text/javascript">
-		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
-	</script>
-	
-	<!-- You can find the sources of the game on the website gamebanana.com -->
-	
+  <body class="dark">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" style="background: url(&quot;Build/FunnyBattle2_GD.jpg&quot;) center center / cover; cursor: default;" width="1542" height="1362"></canvas>
+    </div>
+    <div id="loading-cover" style="display: none;">
+      <div id="unity-loading-bar">
+        <div id="unity-logo"><img src="logo.png"></div>
+        <div id="unity-progress-bar-empty" style="">
+          <div id="unity-progress-bar-full" style="width: 100%;"></div>
+        </div>
+        <div class="spinner" style="display: none;"></div>
+      </div>
+    </div>
+    <div id="unity-fullscreen-button" style="display: none;"></div>
+    <script id="gamedistribution-jssdk" src=""></script><script>
+      const hideFullScreenButton = "1";
+      const buildUrl = "Build";
+      const loaderUrl = buildUrl + "/FunnyBattle2_GD.loader-edit2.js";
+      const config = {
+        dataUrl: buildUrl + "/FunnyBattle2_GD.data.unityweb",
+        frameworkUrl: buildUrl + "/FunnyBattle2_GD.framework.js.unityweb",
+        codeUrl: buildUrl + "/FunnyBattle2_GD.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "GoGoMan",
+        productName: "Squid Battle",
+        productVersion: "0.1",
+      };
 
-</body></html>
+      const container = document.querySelector("#unity-container");
+      const canvas = document.querySelector("#unity-canvas");
+      const loadingCover = document.querySelector("#loading-cover");
+      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+      const progressBarFull = document.querySelector("#unity-progress-bar-full");
+      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      const spinner = document.querySelector('.spinner');
+
+      const canFullscreen = (function() {
+        for (const key of [
+            'exitFullscreen',
+            'webkitExitFullscreen',
+            'webkitCancelFullScreen',
+            'mozCancelFullScreen',
+            'msExitFullscreen',
+          ]) {
+          if (key in document) {
+            return true;
+          }
+        }
+        return false;
+      }());
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+      }
+      canvas.style.background = "url('" + buildUrl + "/FunnyBattle2_GD.jpg') center / cover";
+      loadingCover.style.display = "";
+
+      const script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          spinner.style.display = "none";
+          progressBarEmpty.style.display = "";
+          progressBarFull.style.width = `${100 * progress}%`;
+        }).then((unityInstance) => {
+          loadingCover.style.display = "none";
+          if (canFullscreen) {
+            if (!hideFullScreenButton) {
+              fullscreenButton.style.display = "";
+            }
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script><script src="Build/FunnyBattle2_GD.loader-edit2.js"></script>
+  
+
+<script src="blob.js"></script></body></html>
